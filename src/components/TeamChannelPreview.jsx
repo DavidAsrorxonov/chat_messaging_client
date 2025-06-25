@@ -35,8 +35,11 @@ const TeamChannelPreview = ({ channel, type }) => {
           ? "channel-preview__wrapper__selected"
           : "channel-preview__wrapper"
       }
+      onClick={() => {
+        console.log(channel);
+      }}
     >
-      TeamChannelPreview
+      {type === "team" ? <ChannelPreview /> : <DirectPreview />}
     </div>
   );
 };
