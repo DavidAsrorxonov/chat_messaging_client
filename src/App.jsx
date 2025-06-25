@@ -5,6 +5,7 @@ import COokies from "universal-cookie";
 import {
   ChannelContainer,
   ChannelListContainer,
+  ChannelSearch,
 } from "./components/exports/index";
 
 const client = StreamChat.getInstance(import.meta.env.VITE_STREAM_API_KEY);
