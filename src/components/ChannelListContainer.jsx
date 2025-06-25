@@ -1,7 +1,11 @@
 import { ChannelList, useChatContext } from "stream-chat-react";
 import Cookies from "universal-cookie";
 import { Hospital, LogOut } from "lucide-react";
-import { ChannelSearch, TeamChannelList } from "./exports/index";
+import {
+  ChannelSearch,
+  TeamChannelList,
+  TeamChannelPreview,
+} from "./exports/index";
 
 const SideBar = () => {
   return (
@@ -38,7 +42,10 @@ const ChannelListContainer = () => {
         <ChannelList
           filters={{}}
           channelRenderFilterFn={() => {}}
-          List={(listProps) => <TeamChannelList {...listProps} />}
+          List={(listProps) => <TeamChannelList {...listProps} type={"team"} />}
+          Preview={(previewProps) => (
+            <TeamChannelPreview {...previewProps} type={"team"} />
+          )}
         />
       </div>
     </>
